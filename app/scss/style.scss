@@ -105,3 +105,35 @@ button{
     }
 }
 }
+.products{
+    padding: 110px 0 110px;
+   background-color: $grey;
+}
+.products__inner-btn{
+    text-align: center;
+    margin-bottom: 60px;
+    button{
+        padding: 12px 21px;
+        border: none;
+        background-color: #fff;
+        color: $bg;
+        cursor: pointer;
+        & + button{
+            margin-left: 5px;
+        }
+    }
+}
+.product__item{
+    max-width: 442px;
+    width: 100%;
+    &-img{
+        min-width: 250px;  
+    }
+}
+.product__item-img{
+    min-width: 250px;
+    background-repeat: no-repeat;
+    display: block;
+    background-position: center;
+    background-size: cover;
+}
