@@ -306,23 +306,28 @@
     max-width: 370px;
     text-align: center;
     padding: 0 15px;
-    &:hover{
-        .advantages__item-images{
+
+    &:hover {
+        .advantages__item-images {
             background-color: $green;
 
         }
-        .advantages__item-title{
+
+        .advantages__item-title {
             color: $green;
         }
-        .advantages__item-images{
-            g{
+
+        .advantages__item-images {
+            g {
                 fill: #fff
             }
+
             .cls-2 {
                 fill: #fff;
-              }
+            }
         }
     }
+
     &-images {
         width: 114px;
         height: 114px;
@@ -336,79 +341,92 @@
         margin: 0 auto;
         transition: all .5s;
     }
-    &-title{
-font-size: 24px;
-color: #fff;
-margin-bottom: 25px;
-@include f500;
-transition: all .5s;
+
+    &-title {
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 25px;
+        @include f500;
+        transition: all .5s;
     }
-    &-text{
-font-size: 15px;
-    }
-}
-.icosvg-2{
-svg{
-width: 70px;
-}
-}
-.icosvg-3{
-    svg{
-width: 86px;
+
+    &-text {
+        font-size: 15px;
     }
 }
+
+.icosvg-2 {
+    svg {
+        width: 70px;
+    }
+}
+
+.icosvg-3 {
+    svg {
+        width: 86px;
+    }
+}
+
 // start autor
-.author{
-background-image: url(/img/jpg/autor.jpg);
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-min-height: 750px;
-display: flex;
-justify-content: center;
-align-items: center;
-&__box{
-    min-width: 520px;
-    min-height: 215px;
+.author {
+    background-image: url(/img/jpg/autor.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $green;
+
+    &__box {
+        min-width: 520px;
+        min-height: 215px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green;
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff;
+        margin-right: 45px;
+        max-width: 298px;
+        margin-left: 3%;
+
+        span {
+            @include f700
+        }
+    }
+
+    &__link {
+        margin-right: 3%;
+        font-size: 18px;
+        line-height: 36px;
+        padding: 14px 40px;
+        background-color: #fff;
+        min-width: 142px;
+    }
 }
-&__title{
-font-size: 30px;
-line-height: 30px;
-color: #fff;
-margin-right: 45px;
-max-width: 298px;
-margin-left: 3%;
-span{
-    @include f700
-}
-}
-&__link{
-    margin-right: 3%;
-font-size: 18px;
-line-height: 36px;
-padding: 14px 40px;
-background-color: #fff;
-min-width: 142px;
-}
-}
+
 //tutorial start
-.tutorial{
+.tutorial {
     padding: 70px 0 120px;
-    &__inner{
+
+    &__inner {
         display: flex;
         justify-content: space-between;
     }
-    &__item{
+
+    &__item {
         max-width: 370px;
         width: 100%;
     }
 }
-.tutorial__item{
-    &-tittle{
+
+.tutorial__item {
+    &-tittle {
         background-color: #f8f8f8;
         text-align: center;
         font-size: 24px;
@@ -418,10 +436,175 @@ min-width: 142px;
         margin-top: -8px;
     }
 }
-.tutorial__images-img{
+
+.tutorial__images-img {
     min-height: 270px;
     width: 370px;
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+//start footer
+.footer {
+    background-color: $bg;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0 80px;
+    }
+}
+
+.footer__copy {
+    border-top: 1px solid #424d53;
+}
+
+.footer__copy-text {
+    text-align: center;
+    font-size: 15px;
+    color: #b7c3c8;
+    padding: 25px 0;
+}
+
+.footer__col {
+    max-width: 270px;
+    width: 100%;
+
+    &-menu {
+        max-width: 220px;
+    }
+
+    &-title {
+        font-size: 22px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        color: #fff;
+        padding-bottom: 22px;
+        margin-bottom: 30px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 2px;
+            width: 51px;
+            height: 3px;
+            background-color: $green;
+        }
+    }
+
+    &-text {
+        color: #b7c3c8;
+        margin-bottom: 30px;
+    }
+}
+
+.footer__info {
+    font-family: "";
+    margin-top: 18px;
+    color: #fff;
+    @include f500;
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+        content: "\f041";
+        color: $green;
+        font-size: 18px;
+        font-family: "icomoon";
+        position: absolute;
+        left: 0;
+    }
+}
+
+.footer__info-phone {
+    &::before {
+        content: "\f095";
+    }
+}
+.footer__col-list{
+   a{margin-bottom: 13px;
+    color: #b7c3c8;
+    padding-left: 22px;
+    position: relative;
+    &::before{
+        content: "\f054";
+        color: $green;
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+        font-family: "icomoon";
+    }
+} 
+}
+.footer__social-link{
+    margin-bottom: 33px;
+    li{
+        display: inline-block;
+    }
+    a{
+         width: 28px;
+            height: 28px;
+            background-image: url(/img/css_sprites\(1\).png);
+        & + a{
+            margin-left: 7px;
+           
+        }
+    }
+}
+
+.link-twitter{
+background-position: -32px 0;
+}
+.link-youtube{
+    background-position: -3px -31px;
+}
+.link-pinterest{
+    background-position: -32px -31px;
+}
+.link-linkidin{
+    background-position: -61px 0;
+}
+.footer__form-title{
+margin-bottom: 15px;
+color: #fff;
+font-size: 20px;
+}
+.footer__form{
+    position: relative;
+    input{
+        border: none;
+        display: block;
+        width: 210px;
+        background-color: #2f3c43;
+        height: 40px;
+        font-size: 14px;
+        color: #697378;
+        padding-left: 13px;
+        padding-right: 50px;
+        &::placeholder{
+            color: #697378;
+        }
+    }
+    button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $green;
+        border: none;
+        height: 42px;
+        width: 43px;
+        cursor: pointer;
+        &::before{
+            content: "\f1d8";
+            position: absolute;
+            font-family: "icomoon";
+            color: #fff;
+            font-size: 20px;
+            top: 11px;
+            left: 11px;
+        }
+    }
 }
