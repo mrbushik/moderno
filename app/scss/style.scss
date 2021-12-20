@@ -28,7 +28,8 @@
     background-color: $green;
 }
 
-.header__btn-registr {
+.header__btn-registr,
+.header__btn-logout {
     background-color: $red;
     margin-left: 7px;
 }
@@ -58,6 +59,236 @@
     }
 }
 
+.header__circle {
+    &.active{
+        display: block;
+    }
+    display: none;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    position: relative;
+
+    &::before {
+        position: absolute;
+            top: 50%;
+            left: 50%;
+        transform: translate(-50%, -50%);
+        color: #a0a0a0;
+        font-size: 14px;
+    }
+    span{
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 18px;
+        right: -7px;
+        top: -7px;
+        color: #fff;
+    }
+}
+.header__box{
+    display: flex;
+    align-items: center;
+}
+.header__btn-login--off{
+    display: none;
+}
+.header__btn-logout{
+     display: block;
+&.header__btn-login--off{
+    display: block;
+}
+}
+.notification{
+    span{
+background-color: $yellow;
+    }
+}
+.message{
+span{
+background-color: $tomate;
+}
+}
+.basket{
+    span{
+background-color: $green;        
+    }
+}
+.user{
+    margin-left: 20px;
+    margin-right: 25px;
+    padding-right: 20px;
+    position: relative;
+    &::before{
+content: "\f107";
+position: absolute;
+font-family: 'icomoon';
+font-size: 16px;
+color: #707070;
+top: 0;
+right: 0;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+    }
+&__images{
+margin-right: 15px;
+width: 34px;
+height: 34px;
+overflow: hidden;
+}
+&__info{
+    font-size: 14px;
+    line-height: 24px;
+
+}
+&__name{
+font-size: 14px;
+@include f500;
+color: #222;
+line-height: 24px;
+}
+&__money{
+color: $green;
+@include f700;
+}
+}
+.user__menu{
+top: 69px;
+left: 20px;
+    border: 0px solid rgb(204, 204, 204);
+    position: absolute;
+    background-color: #fff;
+    padding: 0px 20px;
+    width: 158px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    height: 0px;
+    overflow: hidden;
+    a{
+        font-style: 12px;
+        color: #546e7a;
+        margin-bottom: 15px;
+
+  
+    }
+}
+.basket__menu{
+    position: absolute;
+    top: 69px;
+
+}
+.user__box,
+.basket__box{
+    margin-top: 40px;
+    height: 90px;
+    position: relative;
+    &:hover{
+        .user__menu{
+            height: auto;
+            border-width: 1px;
+            padding: 20px;
+            overflow: auto;
+        }
+    }
+}
+
+.basket__menu{
+ border-top: 1px solid #e0e0e0; 
+ right: 0;
+ top: 62px;   
+ height: 0px;
+ overflow: hidden;
+ transition: all .3s;
+}
+.basket__box{
+    margin-top: 54px;
+    margin-left: 15px;
+   &:hover{
+       .basket__menu{
+          overflow: auto;
+          height: auto; 
+       }
+   }
+}
+.basket__item{
+    background-color: #fff;
+    padding: 23px;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    width: 269px;
+}
+.bastet__images{
+    margin-right: 15px;
+}
+.basket__info-name{
+@include f500;
+color: $bg;
+}
+.basket__info-thema{
+font-size: 12px;
+color: $green;
+}
+.basket__info-price{
+@include f500;   
+color: #000;
+font-style: 16px;
+}
+.bassket__summ{
+    padding: 16px 17px 12px;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    background-color: #fff;
+}
+.bassket__summ-title{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 13px;
+    padding-right: 22px;
+    @include f700;
+    font-size: 16px;
+    color: $bg;
+
+}
+.basket__btn{
+    @include f700;
+    padding: 12px 5px;
+    font-size: 14px;
+    background-color: $green;
+    text-align: center;
+    width: 100px;
+    color: #fff;
+}
+.basket__btn-checkout{
+    background-color: $red;
+    width: 123px;
+    margin-left: 6px;
+}
+// .basket__box{
+//     margin-top: 40px;
+//     height: 90px;
+//     position: relative;
+//     &:hover{
+        
+//         .basket__menu{
+//             height: auto;
+//             border-width: 1px;
+//             padding: 20px;
+//             overflow: auto;
+//         }
+//     }
+// }
+.basket__box{
+    margin-top: 55px;
+}
 .search {
 
     background-repeat: no-repeat;
@@ -524,57 +755,70 @@
         content: "\f095";
     }
 }
-.footer__col-list{
-   a{margin-bottom: 13px;
-    color: #b7c3c8;
-    padding-left: 22px;
-    position: relative;
-    &::before{
-        content: "\f054";
-        color: $green;
-        position: absolute;
-        left: 0;
-        font-size: 18px;
-        font-family: "icomoon";
-    }
-} 
-}
-.footer__social-link{
-    margin-bottom: 33px;
-    li{
-        display: inline-block;
-    }
-    a{
-         width: 28px;
-            height: 28px;
-            background-image: url(/img/css_sprites\(1\).png);
-        & + a{
-            margin-left: 7px;
-           
+
+.footer__col-list {
+    a {
+        margin-bottom: 13px;
+        color: #b7c3c8;
+        padding-left: 22px;
+        position: relative;
+
+        &::before {
+            content: "\f054";
+            color: $green;
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            font-family: "icomoon";
         }
     }
 }
 
-.link-twitter{
-background-position: -32px 0;
+.footer__social-link {
+    margin-bottom: 33px;
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        width: 28px;
+        height: 28px;
+        background-image: url(/img/css_sprites\(1\).png);
+
+        &+a {
+            margin-left: 7px;
+
+        }
+    }
 }
-.link-youtube{
+
+.link-twitter {
+    background-position: -32px 0;
+}
+
+.link-youtube {
     background-position: -3px -31px;
 }
-.link-pinterest{
+
+.link-pinterest {
     background-position: -32px -31px;
 }
-.link-linkidin{
+
+.link-linkidin {
     background-position: -61px 0;
 }
-.footer__form-title{
-margin-bottom: 15px;
-color: #fff;
-font-size: 20px;
+
+.footer__form-title {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
 }
-.footer__form{
+
+.footer__form {
     position: relative;
-    input{
+
+    input {
         border: none;
         display: block;
         width: 210px;
@@ -584,11 +828,13 @@ font-size: 20px;
         color: #697378;
         padding-left: 13px;
         padding-right: 50px;
-        &::placeholder{
+
+        &::placeholder {
             color: #697378;
         }
     }
-    button{
+
+    button {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -597,7 +843,8 @@ font-size: 20px;
         height: 42px;
         width: 43px;
         cursor: pointer;
-        &::before{
+
+        &::before {
             content: "\f1d8";
             position: absolute;
             font-family: "icomoon";
