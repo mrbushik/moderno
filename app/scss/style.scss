@@ -185,7 +185,9 @@ left: 20px;
 
 }
 .user__box,
-.basket__box{
+.basket__box,
+.notification__box,
+.massage__box{
     margin-top: 40px;
     height: 90px;
     position: relative;
@@ -207,24 +209,43 @@ left: 20px;
  overflow: hidden;
  transition: all .3s;
 }
-.basket__box{
+.basket__box,
+.notification__box,
+.massage__box{
     margin-top: 54px;
     margin-left: 15px;
    &:hover{
+       .header__circle::before {
+           color: $bg;
+       }
        .basket__menu{
-          overflow: auto;
-          height: auto; 
+          overflow: hidden;
+          height: auto;
+       }
+       .basket__item{
+           padding: 23px 23px;
+border-width: 1px;
        }
    }
 }
 .basket__item{
     background-color: #fff;
-    padding: 23px;
-    border: 1px solid #e0e0e0;
+    padding: 0 23px;
+    transition: all .3s;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border: 0px solid #e0e0e0;
     border-top: none;
     display: flex;
     align-items: center;
     width: 269px;
+    position:relative;
+    &::before{
+        position: absolute;
+        top: 27px;
+        right: 28px;
+        color: #b0bec5;
+    }
 }
 .bastet__images{
     margin-right: 15px;
@@ -241,6 +262,10 @@ color: $green;
 @include f500;   
 color: #000;
 font-style: 16px;
+}
+.basket__info-date{
+font-size: 10px;
+color: #e0e0e0;
 }
 .bassket__summ{
     padding: 16px 17px 12px;
@@ -271,6 +296,21 @@ font-style: 16px;
     background-color: $red;
     width: 123px;
     margin-left: 6px;
+}
+.notification__menu,
+.massage__menu{
+.basket__images{
+margin-right: 20px;
+width: 48px;
+height: 48px;
+border-radius: 50%;
+}
+.basket__info{
+    line-height: 18px;
+}
+}
+.icons-color{
+    color: $tomate;
 }
 // .basket__box{
 //     margin-top: 40px;
