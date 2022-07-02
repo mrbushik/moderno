@@ -4,7 +4,11 @@ $(function(){
         starWidth: "12px",
         readOnly: true
     });
+<<<<<<< HEAD
     $(".gid__inner").slick({
+=======
+    $(".product-slider__inner").slick({
+>>>>>>> master
        dots: true,
        arrows: false,
         slidesToShow: 3,
